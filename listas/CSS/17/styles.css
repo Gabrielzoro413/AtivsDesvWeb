@@ -1,0 +1,26 @@
+nav {
+  background-color: #f5bc1f;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  display: inline;
+  margin-right: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+a:hover {
+  color: #35fc0d;
+}

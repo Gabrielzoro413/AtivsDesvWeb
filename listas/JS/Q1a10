@@ -1,0 +1,77 @@
+1. JavaScript é uma linguagem de programação amplamente usada para tornar páginas web interativas. Ele permite adicionar comportamentos dinâmicos, como responder a cliques de botão, validar formulários, criar animações e interagir com servidores sem recarregar a página. Graças ao JavaScript, sites podem ser mais responsivos e agradáveis de usar, funcionando tanto no lado do cliente (navegador) quanto, com tecnologias como Node.js, no lado do servidor.
+
+2. As palavras-chave var, let e const são usadas para declarar variáveis, mas diferem principalmente no escopo e na possibilidade de alteração. 
+var tem escopo de função e pode ser redeclarada e alterada;
+ let tem escopo de bloco e pode ser alterada, mas não redeclarada no mesmo escopo; 
+ e const também tem escopo de bloco, porém não pode ser alterada após a atribuição.
+  Por exemplo, var x = 10; 
+  permite var x = 20; novamente,
+   enquanto let y = 5;
+    não permite let y = 8; 
+    no mesmo bloco, e const z = 30; 
+    não permite z = 40;.
+
+3. Funções em JavaScript são blocos de código que executam tarefas ou retornam valores. As funções tradicionais usam a palavra function, como em function soma(a, b) { return a + b; 
+},
+ enquanto as arrow functions têm uma sintaxe mais curta e não têm seu próprio this, 
+ como em const soma = (a, b) => a + b;. 
+Arrow functions são úteis especialmente em funções curtas e em callbacks.
+
+4. O DOM, ou Document Object Model, é uma representação estruturada do HTML da página, como uma árvore de objetos. O JavaScript interage com o DOM para manipular elementos da página, como alterar textos, cores, estilos ou responder a eventos. 
+Por exemplo, com document.getElementById("titulo").innerText = "Olá";, 
+alteramos o conteúdo de um elemento HTML   com id "titulo".
+
+5. No JavaScript, a execução pode ser síncrona, onde as instruções são executadas em sequência, ou assíncrona, onde certas tarefas, como requisições a servidores, são realizadas em segundo plano, permitindo que o código continue rodando. Um exemplo de código síncrono é console.log("a"); 
+console.log("b");.
+ Um exemplo assíncrono seria 
+ setTimeout( () => { console.log("Depois"); },  1000 );,
+  que executa o log após 1 segundo, enquanto o restante do código continua.
+
+6. Promises são objetos que representam a conclusão (ou falha) futura de uma operação assíncrona. Elas ajudam a lidar com tarefas que demoram para acontecer, como carregar dados de uma API. Uma Promise pode estar nos estados "pendente", "resolvida" ou "rejeitada", e usamos .then() para lidar com a resposta e .catch() para erros.
+ Por exemplo: fetch(url)
+ .then(res => res.json())
+ .then(data => console.log(data))
+ .catch(err => console.error(err));.
+async e await são formas modernas de lidar com Promises. Com async, uma função retorna uma Promise, e await permite que o código espere a resolução da Promise, tornando o código mais fácil de ler.
+
+Exemplo: 
+async function carregarDados() {
+  const resposta = await fetch("https://api.exemplo.com");
+  const dados = await resposta.json();
+  console.log(dados);
+}
+
+
+8. for...in percorre as chaves de um objeto, enquanto for...of percorre os valores de arrays ou objetos iteráveis.
+
+const obj = { nome: "Ana", idade: 25 };
+for (let chave in obj) {
+  console.log(chave); // nome, idade
+}
+
+const array = [1, 2, 3];
+for (let valor of array) {
+  console.log(valor); // 1, 2, 3
+}
+
+9. A desestruturação permite extrair valores de arrays ou propriedades de objetos de forma mais prática. 
+// Objeto
+const pessoa = { nome: "João", idade: 30 };
+const { nome, idade } = pessoa;
+
+// Array
+const numeros = [10, 20];
+const [a, b] = numeros;
+
+
+10. Os operadores spread e rest usam a mesma sintaxe (...), mas com funções opostas. O operador spread expande elementos de arrays ou objetos, enquanto o operador rest agrupa múltiplos elementos em um array.
+
+Exemplo:
+// Spread
+const numeros = [1, 2, 3];
+const copia = [...numeros];
+
+// Rest
+function soma(...valores) {
+  return valores.reduce((acc, val) => acc + val);
+}

@@ -1,0 +1,113 @@
+
+1. O que é HTML?
+   HTML significa HyperText Markup Language e é a linguagem padrão usada para criar  e estruturar as  páginas da web. Ele permite estruturar informações como textos, imagens, links, vídeos e outros elementos que compõem uma página. Ele é fundamental no desenvolvimento web porque forma a base de qualquer site, permitindo que navegadores interpretem e exibam o conteúdo corretamente ao usuário.
+
+2. Estrutura do HTML
+   A estrutura básica de um documento HTML começa com a declaração <!DOCTYPE html>, que indica que estamos utilizando HTML5. Em seguida, temos a tag <html>, que envolve todo o conteúdo da página. Dentro dela, há duas partes principais: o <head>, que contém informações como o título da página e metadados, e o <body>, que contém o conteúdo visível ao usuário. Um exemplo simples seria:
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>Minha Página</title>
+  </head>
+  <body>
+    <h1>Bem-vindo ao meu site!</h1>
+    <p>Essa é uma página de exemplo usando HTML.</p>
+  </body>
+</html>
+
+3. Diferença entre HTML e HTML5
+   HTML5 é a versão mais atual da linguagem HTML e trouxe várias melhorias. A primeira grande diferença é a introdução de elementos semânticos, como <header>, <footer>, <article> e <section>, que ajudam a organizar o conteúdo de forma mais clara. A segunda é o suporte nativo para mídias, com as tags <audio> e <video>, sem necessidade de plugins externos como Flash. E a terceira diferença é que o HTML5 oferece novas APIs e funcionalidades, como geolocalização, armazenamento local (localStorage), canvas para gráficos e comunicação em tempo real com WebSockets .
+
+4. Elementos e Atributos
+   Elementos HTML são os componentes básicos de uma página da web, representados pelas tags que definem diferentes partes do conteúdo, como parágrafos, imagens, links, listas e títulos. Já os atributos são usados para fornecer informações adicionais que podemos adicionar dentro das tags para configurar ou modificar o comportamento ou aparência dos elementos Por exemplo, em
+   <a href="https://www.google.com">Google</a>
+   , a tag <a> é o elemento que cria o link, e o atributo href especifica o destino desse link.
+
+5. Listas em HTML
+   As listas em HTML servem para organizar conteúdos em forma de itens. Existem três tipos principais:
+
+A tag `<ul>` é usada para criar listas não ordenadas, ou seja, listas em que a ordem dos itens não importa. Os itens são geralmente marcados com pontos (bolinhas). É ideal para listas de compras, características, ou qualquer grupo de itens sem sequência específica.
+
+A tag `<ol>` é usada para listas ordenadas, onde a sequência dos itens é importante. Os itens são numerados (1, 2, 3...), sendo útil em receitas, instruções passo a passo ou classificações.
+
+A tag `<dl>` é usada para criar listas de definição, composta por termos e suas descrições. Usa as tags `<dt>` (definição do termo) e `<dd>` (descrição). É indicada para glossários, FAQs ou
+listas de termos com explicações
+
+6. Tags Semânticas
+
+Tags semânticas são elementos HTML introduzidos no HTML5 que têm significado próprio e indicam o papel do conteúdo dentro da estrutura da página. Elas facilitam a leitura do código por humanos e compreensão por mecanismos de busca e leitores de tela.
+
+`<header>`: representa o cabeçalho de uma seção ou página, podendo conter título, logotipo, menu, etc.
+
+`<section>`: define uma seção temática do conteúdo, como um capítulo ou área específica.
+
+`<footer>`: indica o rodapé da página ou seção, geralmente com informações de contato, direitos autorais, links úteis, etc.
+
+7. Formulários HTML
+
+Formulários em HTML são usados para coletar dados dos usuários. Principais elementos:
+
+`<form>`: define o início e o fim de um formulário.
+`<input>`: campo genérico para inserção de dados (texto, e-mail, senha, etc.).
+`<label>`: rótulo para descrever um campo, melhorando a acessibilidade.
+`<textarea>`: campo de texto multilinha, útil para comentários ou descrições.
+`<button>` ou `<input type="submit">`: envia os dados do formulário.
+
+html
+
+<form>
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome">
+  <br>
+  <label for="msg">Mensagem:</label>
+  <textarea id="msg" name="msg"></textarea>
+  <br>
+  <button type="submit">Enviar</button>
+</form>
+
+8. Links e Âncoras
+
+Link absoluto: aponta para um endereço completo da web (inclui domínio).
+
+html <a href="https://www.google.com">Ir para o Google</a>
+
+Link relativo: aponta para um arquivo dentro do mesmo site ou diretório.
+
+html <a href="contato.html">Página de Contato</a>
+
+Resumo: Absoluto funciona em qualquer lugar; relativo depende da estrutura do site.
+
+9. Meta Tags
+
+Meta tags são informações inseridas no `<head>` do HTML que não aparecem visualmente, mas informam o navegador e mecanismos de busca sobre configurações da página.
+
+html <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 --> 
+<meta name="description" content="Site de receitas caseiras"> <!-- Descrição da página para SEO -->
+
+Outras funções incluem definir palavras-chave, autor da página, tempo de atualização automática, entre outros.
+
+10. Áudio e Vídeo
+
+A tag <audio> é usada para incorporar arquivos de áudio em uma página.
+
+A tag <video> é usada para incorporar vídeos.
+
+Para garantir que o áudio e vídeo funcionem na maioria dos navegadores, é importante fornecer múltiplos formatos do arquivo e usar a estrutura de <source> dentro das tags, além de incluir uma mensagem para os navegadores que não suportam essas tags.
+
+html 
+<audio controls>
+ <source src="audio.mp3" type="audio/mpeg"> 
+ <source src="audio.ogg" type="audio/ogg">
+Seu navegador não suporta áudio. </audio>
+
+<video controls width="320" height="240">
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.webm" type="video/webm">
+  Seu navegador não suporta vídeo. 
+</video>
+
+Assim, o navegador escolhe o formato que consegue reproduzir e o usuário tem uma
+ melhor experiência, independentemente do navegador ou dispositivo.

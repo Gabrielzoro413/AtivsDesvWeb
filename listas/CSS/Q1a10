@@ -1,0 +1,31 @@
+1. O CSS, ou Cascading Style Sheets, é uma linguagem usada para definir a aparência visual de páginas web. Ele permite separar o conteúdo HTML da apresentação, controlando aspectos como cores, fontes, espaçamentos e layout, tornando os sites mais bonitos e fáceis de manter.
+
+2. CSS inline é aplicado diretamente no elemento HTML pelo atributo style, por exemplo, `<p style="color: red;">`.
+   CSS interno fica dentro da tag `<style>` no cabeçalho do documento HTML, servindo para aplicar estilos em toda a página.
+   CSS externo é um arquivo `.css` separado que é linkado ao HTML usando a tag `<link>`. Inline é usado para ajustes rápidos e isolados, interno para estilos temporários ou pequenos projetos, e externo para projetos maiores e com muitos estilos, pois facilita manutenção e reaproveitamento.
+
+3. Os principais seletores são o seletor por ID, que seleciona um elemento único com um id específico usando `#`, por exemplo, `#meuId {}`,
+   o seletor por classe que seleciona um grupo de elementos com a mesma classe usando `.`, como `.minhaClasse {}`,
+   e o seletor por elemento que seleciona todas as tags de um tipo, por exemplo, `p {}` para todos os parágrafos.
+
+4. A diferença está no uso e unicidade:
+   `.classe` pode ser atribuída a vários elementos e serve para aplicar um estilo comum a todos eles, enquanto `#id` deve ser único dentro da página, sendo usado para identificar e estilizar um único elemento específico. Usa-se `id` para elementos únicos e `classe` para grupos de elementos.
+
+5. O Box Model é o modelo que define como os elementos HTML são renderizados na página, composto por quatro partes: o conteúdo (onde fica o texto ou imagem), o padding (espaço interno entre o conteúdo e a borda), a borda em si (border), e a margem (margin), que é o espaço externo que separa o elemento dos outros ao redor.
+
+6. Usa-se `color` para definir a cor do texto, `font-size` para definir o tamanho da fonte, e `text-align` para controlar o alinhamento do texto, podendo ser valores como `left`, `center`, `right` ou `justify`.
+
+7. Flexbox é um modelo de layout que facilita a criação de layouts flexíveis e responsivos, permitindo alinhar e distribuir elementos dentro de um container, mesmo quando os seus tamanhos são dinâmicos ou desconhecidos, simplificando o posicionamento horizontal e vertical.
+
+8. Unidades absolutas como `px` definem tamanhos fixos em pixels, que não mudam com o tamanho da tela ou preferências do usuário. 
+Unidades relativas, como `em` e `rem`, definem tamanhos proporcionais ao tamanho da fonte do elemento pai ou da raiz, e `%` define um tamanho proporcional a um elemento pai, o que ajuda na responsividade e escalabilidade dos layouts.
+
+9. Pseudo-classes são palavras-chave que definem um estado especial de um elemento, como `:hover` para quando o mouse está sobre o elemento.
+   Pseudo-elementos criam ou estilizam partes específicas de um elemento, como `::first-letter` que estiliza a primeira letra de um texto.
+   Exemplo de pseudo-classe:
+   `a:hover { color: red; }`
+   e pseudo-elemento:
+   `p::first-letter { font-size: 200%; }`.
+
+10. Media queries são regras CSS que aplicam estilos diferentes dependendo das características do dispositivo, como largura da tela.
+    Elas permitem que o layout e os estilos se adaptem a diferentes tamanhos e resoluções de tela, tornando o design responsivo e adequado tanto para desktops quanto para dispositivos móveis.
